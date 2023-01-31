@@ -10,7 +10,8 @@ from rest_framework import permissions
 from rest_framework.documentation import include_docs_urls
 
 from trips.views import SignUpView, LogInView
-
+from upload.views import image_upload
+from term import views as xterms_views
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -32,9 +33,16 @@ urlpatterns = [
     path('api/sign_up/', SignUpView.as_view(), name='sign_up'),
     path('api/log_in/', LogInView.as_view(), name='log_in'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/trip/', include('trips.urls', 'trip',)),
     
-        path('api-auth/', include('rest_framework.urls')),
+    path('api/trip/', include('trips.urls', 'trip',)),
+    re_path('term/', xterms_views.index, name='term'),
+    path('', include('vnc.urls')),
+
+    path("upload/", image_upload, name="upload"),
+    path('', include('terminal_emulator.urls')),
+    
+    
+    path('api-auth/', include('rest_framework.urls')),
     path("docs/", include_docs_urls(title="Movies API")),
 
     re_path(
@@ -50,7 +58,7 @@ urlpatterns = [
     re_path(
         r"^redoc/$", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"
     ),
-    re_path("", TemplateView.as_view(template_name="index.html"),  name=""),
+    # re_path("", TemplateView.as_view(template_name="index.html"),  name=""),
 ] 
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

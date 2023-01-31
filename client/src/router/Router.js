@@ -14,7 +14,9 @@ import ErrorPage from "../views/pages/ErrorPage";
 
 //DashBoard
 import DashBoard from "../features/DashBoard";
-
+import Pyxtermjs from "../features/terminal/pyxtermjs";
+import VNC from "../features/vnc/VNC";
+import Term from "../features/term_execute/Term";
 // //auth
 // import { Login, PrivateRoute, Registration } from "../features/auth/components";
 
@@ -55,7 +57,18 @@ const Router = () => {
       children: [
         { index: true, element: <DashBoard /> },
         { path: "dashboard", element: <DashBoard /> },
-
+        {
+          path: "terminal",
+          element: <Pyxtermjs />,
+        },
+        {
+          path: "vnc",
+          element: <VNC />,
+        },
+        {
+          path: "term_execute",
+          element: <Term />,
+        },
         // {
         //   path: "github",
         //   children: [

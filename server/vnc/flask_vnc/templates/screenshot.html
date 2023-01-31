@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Screenshot</title>
+  </head>
+  <body>
+    <img
+      src="{{ url_for('static', filename='screenshot.png') }}"
+      alt="Screenshot"
+    />
+    <form action="{{url_for('screenshot')}}" method="GET">
+      <input type="submit" value="Take Screenshot" />
+    </form>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 // ** React Imports
 import { Outlet } from "react-router-dom";
 
-import { Sidebar } from "../components/Sidebar";
+import { SideBar } from "../components/SideBar";
 import { SidebarMini } from "../components/SidebarMini";
 import { NavBar } from "../components/NavBar";
 
@@ -17,7 +17,7 @@ const BlankLayout = () => {
       {desktop && (
         <>
           <SidebarMini key={"SidebarMini"} />
-          {menuState && <Sidebar key={"_sidebar"} />}
+          {menuState && <SideBar key={"_sidebar"} />}
         </>
       )}
       <div className="w-full h-full">

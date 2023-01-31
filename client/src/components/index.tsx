@@ -23,7 +23,7 @@ import { NavBar } from "./NavBar";
 // import SearchForm from "./ui-components/form/SearchForm";
 
 import Markdown from "./Markdown";
-import { Sidebar } from "./Sidebar";
+import { SideBar } from "./SideBar";
 import { SidebarMini } from "./SidebarMini";
 
 export {
@@ -32,7 +32,7 @@ export {
   // Input,
   NavBar,
   SidebarMini,
-  Sidebar,
+  SideBar,
   Markdown,
   // Message,
   // ProfileForm,
