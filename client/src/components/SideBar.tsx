@@ -93,6 +93,14 @@ export function SideBar() {
                   <span>Term_execute</span>
                 </Link>
               </li>
+              <li className="rounded-sm">
+                <Link
+                  to="/xterm"
+                  className="flex items-center p-2 space-x-3 rounded-md bg-slate-100 hover:bg-orange-50"
+                >
+                  <span>Xterm</span>
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

@@ -115,7 +115,7 @@ class Connect(APIView):
     
     def get(self, request):
         print(self.server)
-        connections = self.server.clients
+        connections = ["self.server.clients"]
         return Response({'connections': connections})
 
 

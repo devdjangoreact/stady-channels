@@ -17,6 +17,8 @@ import DashBoard from "../features/DashBoard";
 import Pyxtermjs from "../features/terminal/pyxtermjs";
 import VNC from "../features/vnc/VNC";
 import Term from "../features/term_execute/Term";
+import XtermTerminal from "../features/term_execute/Xterm";
+
 // //auth
 // import { Login, PrivateRoute, Registration } from "../features/auth/components";
 
@@ -64,6 +66,10 @@ const Router = () => {
         {
           path: "vnc",
           element: <VNC />,
+        },
+        {
+          path: "xterm",
+          element: <XtermTerminal />,
         },
         {
           path: "term_execute",

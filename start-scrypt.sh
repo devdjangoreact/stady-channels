@@ -1,7 +1,7 @@
 #!/bin/bash
 # django
-echo "app/backend create and chenge dir to app/backend"
-mkdir app && cd app && mkdir backend && cd backend
+echo "server create and chenge dir to server"
+mkdir server && cd server 
 
 echo "initialision python venv"
 python3 -m venv venv
@@ -37,5 +37,6 @@ python3 manage.py migrate
 
 # react
 cd ..
-npx create-react-app frontend --template typescript
-
+npx create-react-app client --template typescript
+yarn add axios==^1.2.6 dotenv==^16.0.3 react-icons==^4.7.1 react-redux==^8.0.2
+@reduxjs/toolkit==^1.8.3 react-router-dom==^6.3.0
